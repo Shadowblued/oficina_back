@@ -1,1 +1,5 @@
-/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/App.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/controller/PessoaController.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/repository/PessoaRepository.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/OfficinaBackProg2Application.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/service/PessoaService.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/model/Pessoa.java
