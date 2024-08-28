@@ -1,5 +1,14 @@
-/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/controller/PessoaController.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/repository/PessoaRepository.java
-/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/OfficinaBackProg2Application.java
-/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/service/PessoaService.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/repository/ClienteRepository.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/model/Pessoa.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/service/ClienteService.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/controller/MecanicoController.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/controller/PessoaController.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/repository/MecanicoRepository.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/controller/Valid.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/OfficinaBackProg2Application.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/model/Cliente.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/service/PessoaService.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/controller/ClienteController.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/service/MecanicoService.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/model/Mecanico.java
