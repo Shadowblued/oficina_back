@@ -1,225 +1,248 @@
 
-### Documentação da API - Oficina
 
-**Base URL:** `http://18.188.56.142:8080/api/pessoas`
-
----
-
-#### 1. Listar todas as pessoas
-
-- **Endpoint:** `/api/pessoas`
-- **Método HTTP:** `GET`
-- **Descrição:** Retorna uma lista de todas as pessoas cadastradas no sistema.
-
-**Exemplo de Requisição:**
-
-```http
-GET http://18.188.56.142:8080/api/pessoas
-```
-
-**Exemplo de Resposta:**
-
-```json
-[
-    {
-        "id": 1,
-        "nome": "João Silva",
-        "endereco": "Rua A, 123",
-        "cpf": "123.456.789-00",
-        "cidade": "São Paulo",
-        "telefone": "11 98765-4321"
-    },
-    {
-        "id": 2,
-        "nome": "Maria Oliveira",
-        "endereco": "Rua B, 456",
-        "cpf": "987.654.321-00",
-        "cidade": "Rio de Janeiro",
-        "telefone": "21 99876-5432"
-    }
-]
-```
+### Documentação da API para `18.188.56.142:8080`
 
 ---
 
-#### 2. Obter detalhes de uma pessoa por ID
+#### **Clientes**
 
-- **Endpoint:** `/api/pessoas/{id}`
-- **Método HTTP:** `GET`
-- **Descrição:** Retorna os detalhes de uma pessoa específica pelo seu ID.
-- **Parâmetros de URL:**
-  - `id` (inteiro): O ID da pessoa que você deseja buscar.
+**Base URL**: `http://18.188.56.142:8080/api/clientes`
 
-**Exemplo de Requisição:**
+1. **Criar um novo Cliente**
+   - **Endpoint**: `/api/clientes`
+   - **Método**: `POST`
+   - **Corpo da Requisição**:
+     ```json
+     {
+       "nome": "string",
+       "telefone": "string",
+       "endereco": "string",
+       "cpf": "string",
+       "cidade": "string"
+     }
+     ```
+   - **Descrição**: Cria um novo cliente com as informações fornecidas.
+   - **Respostas**:
+     - **200 OK**: Cliente criado com sucesso.
+       ```json
+       {
+         "id": 1,
+         "nome": "string",
+         "telefone": "string",
+         "endereco": "string",
+         "cpf": "string",
+         "cidade": "string"
+       }
+       ```
+     - **400 Bad Request**: Dados inválidos fornecidos na requisição.
+     - **500 Internal Server Error**: Erro interno do servidor ao processar a requisição.
 
-```http
-GET http://18.188.56.142:8080/api/pessoas/1
-```
+2. **Listar todos os Clientes**
+   - **Endpoint**: `/api/clientes`
+   - **Método**: `GET`
+   - **Descrição**: Retorna uma lista de todos os clientes cadastrados.
+   - **Respostas**:
+     - **200 OK**: Lista de clientes retornada com sucesso.
+       ```json
+       [
+         {
+           "id": 1,
+           "nome": "string",
+           "telefone": "string",
+           "endereco": "string",
+           "cpf": "string",
+           "cidade": "string"
+         },
+         ...
+       ]
+       ```
+     - **500 Internal Server Error**: Erro interno do servidor ao processar a requisição.
 
-**Exemplo de Resposta (200 OK):**
+3. **Obter um Cliente por ID**
+   - **Endpoint**: `/api/clientes/{id}`
+   - **Método**: `GET`
+   - **Parâmetros**:
+     - **Path Parameter**: `id` (inteiro) - ID do cliente a ser recuperado.
+   - **Descrição**: Retorna as informações de um cliente específico pelo ID.
+   - **Respostas**:
+     - **200 OK**: Cliente encontrado e retornado com sucesso.
+       ```json
+       {
+         "id": 1,
+         "nome": "string",
+         "telefone": "string",
+         "endereco": "string",
+         "cpf": "string",
+         "cidade": "string"
+       }
+       ```
+     - **404 Not Found**: Cliente não encontrado com o ID fornecido.
+     - **500 Internal Server Error**: Erro interno do servidor ao processar a requisição.
 
-```json
-{
-    "id": 1,
-    "nome": "João Silva",
-    "endereco": "Rua A, 123",
-    "cpf": "123.456.789-00",
-    "cidade": "São Paulo",
-    "telefone": "11 98765-4321"
-}
-```
+4. **Atualizar um Cliente por ID**
+   - **Endpoint**: `/api/clientes/{id}`
+   - **Método**: `PUT`
+   - **Parâmetros**:
+     - **Path Parameter**: `id` (inteiro) - ID do cliente a ser atualizado.
+   - **Corpo da Requisição**:
+     ```json
+     {
+       "nome": "string",
+       "telefone": "string",
+       "endereco": "string",
+       "cpf": "string",
+       "cidade": "string"
+     }
+     ```
+   - **Descrição**: Atualiza as informações de um cliente específico.
+   - **Respostas**:
+     - **200 OK**: Cliente atualizado com sucesso.
+       ```json
+       {
+         "id": 1,
+         "nome": "string",
+         "telefone": "string",
+         "endereco": "string",
+         "cpf": "string",
+         "cidade": "string"
+       }
+       ```
+     - **400 Bad Request**: Dados inválidos fornecidos na requisição.
+     - **404 Not Found**: Cliente não encontrado com o ID fornecido.
+     - **500 Internal Server Error**: Erro interno do servidor ao processar a requisição.
 
-**Exemplo de Resposta (404 Not Found):**
-
-```json
-{
-    "timestamp": "2024-08-25T15:30:20.123+00:00",
-    "status": 404,
-    "error": "Not Found",
-    "message": "Pessoa não encontrada",
-    "path": "/api/pessoas/10"
-}
-```
-
----
-
-#### 3. Criar uma nova pessoa
-
-- **Endpoint:** `/api/pessoas`
-- **Método HTTP:** `POST`
-- **Descrição:** Cria uma nova pessoa no sistema.
-- **Corpo da Requisição (JSON):**
-
-```json
-{
-    "nome": "Carlos Eduardo",
-    "endereco": "Rua C, 789",
-    "cpf": "321.654.987-00",
-    "cidade": "Belo Horizonte",
-    "telefone": "31 91234-5678"
-}
-```
-
-**Exemplo de Requisição:**
-
-```http
-POST http://18.188.56.142:8080/api/pessoas
-Content-Type: application/json
-
-{
-    "nome": "Carlos Eduardo",
-    "endereco": "Rua C, 789",
-    "cpf": "321.654.987-00",
-    "cidade": "Belo Horizonte",
-    "telefone": "31 91234-5678"
-}
-```
-
-**Exemplo de Resposta (201 Created):**
-
-```json
-{
-    "id": 3,
-    "nome": "Carlos Eduardo",
-    "endereco": "Rua C, 789",
-    "cpf": "321.654.987-00",
-    "cidade": "Belo Horizonte",
-    "telefone": "31 91234-5678"
-}
-```
-
----
-
-#### 4. Atualizar uma pessoa existente
-
-- **Endpoint:** `/api/pessoas/{id}`
-- **Método HTTP:** `PUT`
-- **Descrição:** Atualiza os dados de uma pessoa existente.
-- **Parâmetros de URL:**
-  - `id` (inteiro): O ID da pessoa que você deseja atualizar.
-- **Corpo da Requisição (JSON):**
-
-```json
-{
-    "nome": "Carlos Eduardo",
-    "endereco": "Rua C, 1234",
-    "cpf": "321.654.987-00",
-    "cidade": "Belo Horizonte",
-    "telefone": "31 91234-5678"
-}
-```
-
-**Exemplo de Requisição:**
-
-```http
-PUT http://18.188.56.142:8080/api/pessoas/3
-Content-Type: application/json
-
-{
-    "nome": "Carlos Eduardo",
-    "endereco": "Rua C, 1234",
-    "cpf": "321.654.987-00",
-    "cidade": "Belo Horizonte",
-    "telefone": "31 91234-5678"
-}
-```
-
-**Exemplo de Resposta (200 OK):**
-
-```json
-{
-    "id": 3,
-    "nome": "Carlos Eduardo",
-    "endereco": "Rua C, 1234",
-    "cpf": "321.654.987-00",
-    "cidade": "Belo Horizonte",
-    "telefone": "31 91234-5678"
-}
-```
-
-**Exemplo de Resposta (404 Not Found):**
-
-```json
-{
-    "timestamp": "2024-08-25T15:30:20.123+00:00",
-    "status": 404,
-    "error": "Not Found",
-    "message": "Pessoa não encontrada",
-    "path": "/api/pessoas/10"
-}
-```
+5. **Deletar um Cliente por ID**
+   - **Endpoint**: `/api/clientes/{id}`
+   - **Método**: `DELETE`
+   - **Parâmetros**:
+     - **Path Parameter**: `id` (inteiro) - ID do cliente a ser deletado.
+   - **Descrição**: Deleta um cliente específico pelo ID.
+   - **Respostas**:
+     - **204 No Content**: Cliente deletado com sucesso.
+     - **404 Not Found**: Cliente não encontrado com o ID fornecido.
+     - **500 Internal Server Error**: Erro interno do servidor ao processar a requisição.
 
 ---
 
-#### 5. Deletar uma pessoa
+#### **Mecânicos**
 
-- **Endpoint:** `/api/pessoas/{id}`
-- **Método HTTP:** `DELETE`
-- **Descrição:** Deleta uma pessoa existente pelo seu ID.
-- **Parâmetros de URL:**
-  - `id` (inteiro): O ID da pessoa que você deseja deletar.
+**Base URL**: `http://18.188.56.142:8080/api/mecanicos`
 
-**Exemplo de Requisição:**
+1. **Criar um novo Mecânico**
+   - **Endpoint**: `/api/mecanicos`
+   - **Método**: `POST`
+   - **Corpo da Requisição**:
+     ```json
+     {
+       "nome": "string",
+       "telefone": "string",
+       "endereco": "string",
+       "cpf": "string",
+       "cidade": "string"
+     }
+     ```
+   - **Descrição**: Cria um novo mecânico com as informações fornecidas.
+   - **Respostas**:
+     - **200 OK**: Mecânico criado com sucesso.
+       ```json
+       {
+         "id": 1,
+         "nome": "string",
+         "telefone": "string",
+         "endereco": "string",
+         "cpf": "string",
+         "cidade": "string"
+       }
+       ```
+     - **400 Bad Request**: Dados inválidos fornecidos na requisição.
+     - **500 Internal Server Error**: Erro interno do servidor ao processar a requisição.
 
-```http
-DELETE http://18.188.56.142:8080/api/pessoas/3
-```
+2. **Listar todos os Mecânicos**
+   - **Endpoint**: `/api/mecanicos`
+   - **Método**: `GET`
+   - **Descrição**: Retorna uma lista de todos os mecânicos cadastrados.
+   - **Respostas**:
+     - **200 OK**: Lista de mecânicos retornada com sucesso.
+       ```json
+       [
+         {
+           "id": 1,
+           "nome": "string",
+           "telefone": "string",
+           "endereco": "string",
+           "cpf": "string",
+           "cidade": "string"
+         },
+         ...
+       ]
+       ```
+     - **500 Internal Server Error**: Erro interno do servidor ao processar a requisição.
 
-**Exemplo de Resposta (204 No Content):**
+3. **Obter um Mecânico por ID**
+   - **Endpoint**: `/api/mecanicos/{id}`
+   - **Método**: `GET`
+   - **Parâmetros**:
+     - **Path Parameter**: `id` (inteiro) - ID do mecânico a ser recuperado.
+   - **Descrição**: Retorna as informações de um mecânico específico pelo ID.
+   - **Respostas**:
+     - **200 OK**: Mecânico encontrado e retornado com sucesso.
+       ```json
+       {
+         "id": 1,
+         "nome": "string",
+         "telefone": "string",
+         "endereco": "string",
+         "cpf": "string",
+         "cidade": "string"
+       }
+       ```
+     - **404 Not Found**: Mecânico não encontrado com o ID fornecido.
+     - **500 Internal Server Error**: Erro interno do servidor ao processar a requisição.
 
-```http
-HTTP/1.1 204 No Content
-```
+4. **Atualizar um Mecânico por ID**
+   - **Endpoint**: `/api/mecanicos/{id}`
+   - **Método**: `PUT`
+   - **Parâmetros**:
+     - **Path Parameter**: `id` (inteiro) - ID do mecânico a ser atualizado.
+   - **Corpo da Requisição**:
+     ```json
+     {
+       "nome": "string",
+       "telefone": "string",
+       "endereco": "string",
+       "cpf": "string",
+       "cidade": "string"
+     }
+     ```
+   - **Descrição**: Atualiza as informações de um mecânico específico.
+   - **Respostas**:
+     - **200 OK**: Mecânico atualizado com sucesso.
+       ```json
+       {
+         "id": 1,
+         "nome": "string",
+         "telefone": "string",
+         "endereco": "string",
+         "cpf": "string",
+         "cidade": "string"
+       }
+       ```
+     - **400 Bad Request**: Dados inválidos fornecidos na requisição.
+     - **404 Not Found**: Mecânico não encontrado com o ID fornecido.
+     - **500 Internal Server Error**: Erro interno do servidor ao processar a requisição.
 
-**Exemplo de Resposta (404 Not Found):**
+5. **Deletar um Mecânico por ID**
+   - **Endpoint**: `/api/mecanicos/{id}`
+   - **Método**: `DELETE`
+   - **Parâmetros**:
+     - **Path Parameter**: `id` (inteiro) - ID do mecânico a ser deletado.
+   - **Descrição**: Deleta um mecânico específico pelo ID.
+   - **Respostas**:
+     - **204 No Content**: Mecânico deletado com
 
-```json
-{
-    "timestamp": "2024-08-25T15:30:20.123+00:00",
-    "status": 404,
-    "error": "Not Found",
-    "message": "Pessoa não encontrada",
-    "path": "/api/pessoas/10"
-}
-```
+ sucesso.
+     - **404 Not Found**: Mecânico não encontrado com o ID fornecido.
+     - **500 Internal Server Error**: Erro interno do servidor ao processar a requisição.
+
+---
 
