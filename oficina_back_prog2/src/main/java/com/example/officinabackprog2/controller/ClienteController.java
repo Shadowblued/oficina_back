@@ -18,6 +18,7 @@ public class ClienteController {
     @Autowired
     private ClienteService clienteService;
 
+
     @PostMapping
     public ResponseEntity<Cliente> createCliente(@RequestBody Cliente cliente) {
         Cliente savedCliente = clienteService.save(cliente);
@@ -31,9 +32,46 @@ public class ClienteController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Cliente>> getAllClientes() {
+    public ResponseEntity<List<Cliente>> getAllClientes(
+        @RequestParam(required = false) String nome, 
+        @RequestParam(required = false) String cpf
+    ) {
         List<Cliente> clientes = clienteService.findAll();
+
+        if(nome != null && cpf  != null) {
+            clientes = clienteService.findByNomeAndCpf(nome, cpf);
+        } else if (nome != null){
+            clientes = clienteService.findByNome(nome);
+        } else if (cpf != null) {
+            clientes = clienteService.findByCpf(cpf);   
+        } else {
+            clientes = clienteService.findAll();
+        }
+
         return ResponseEntity.ok(clientes);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Cliente> updateClienteById(
+        @PathVariable Integer id,
+        @RequestBody     Cliente clienteAtualizado
+    ) {
+        Optional<Cliente> clienteOptional = clienteService.findById(id);
+
+        if(clienteOptional.isPresent()){
+            Cliente clienteExistente = clienteOptional.get();
+            clienteExistente.setNome(clienteAtualizado.getNome());
+            clienteExistente.setEndereco(clienteAtualizado.getEndereco());
+            clienteExistente.setCpf(clienteAtualizado.getCpf());
+            clienteExistente.setCidade(clienteAtualizado.getCidade());
+            clienteExistente.setTelefone(clienteAtualizado.getTelefone());
+
+            Cliente clienteSalvo = clienteService.update(id, clienteExistente);
+            return ResponseEntity.ok(clienteSalvo);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+
     }
 
     @DeleteMapping("/{id}")

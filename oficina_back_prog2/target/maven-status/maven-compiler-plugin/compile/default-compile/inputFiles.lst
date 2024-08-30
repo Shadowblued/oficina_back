@@ -1,6 +1,7 @@
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/repository/PessoaRepository.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/repository/ClienteRepository.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/model/Pessoa.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/config/CorsConfig.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/service/ClienteService.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/controller/MecanicoController.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/controller/PessoaController.java

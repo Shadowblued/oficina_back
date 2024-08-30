@@ -31,7 +31,19 @@ public class ClienteService {
         return clienteRepository.findById(id);
     }
 
-    public Cliente update(int id, Cliente clienteDetails) {
+    public List<Cliente> findByNome(String nome){
+        return clienteRepository.findByNome(nome);
+    }
+
+    public List<Cliente> findByCpf(String cpf){
+        return clienteRepository.findByCpf(cpf);
+    }
+
+    public List<Cliente> findByNomeAndCpf(String nome, String cpf){
+        return clienteRepository.findByNomeAndCpf(nome, cpf);
+    }
+
+    public Cliente update(int id, Cliente clienteDetails) { 
         Cliente cliente = clienteRepository.findById(id)
             .orElseThrow(() -> new ClienteNotFoundException("Cliente not found for this id :: " + id));
 
