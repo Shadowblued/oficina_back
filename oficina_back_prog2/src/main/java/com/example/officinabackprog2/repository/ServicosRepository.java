@@ -10,6 +10,6 @@ import java.util.List;
 @Repository
 public interface ServicosRepository extends JpaRepository<Servicos, Integer> {
     List<Servicos> findByDescricaoServico(String descricaoServico);
-    List<Servicos> findByValorServico(Double  valorServico);
-    List<Servicos> findByDescricaoServicoAndValorServicos(String descricaoServico, Double  valorService);
+    List<Servicos> findByValorServico(Double valorServico);
+    List<Servicos> findByDescricaoServicoAndValorServico(String descricaoServico, Double valorServico);
 }

@@ -15,16 +15,16 @@ public class Servicos {
     private Integer id;
 
     private String descricaoServico;
-    private Double valorService;
+    private Double valorServico;
 
     public Servicos() {
         this.descricaoServico = "Desconhecido";
-        this.valorService = 0.00;
+        this.valorServico = 0.00;
     }
 
-    public Servicos(String descricaoServico, Double valorService) {
+    public Servicos(String descricaoServico, Double valorServico) {
         this.descricaoServico = descricaoServico;
-        this.valorService = valorService;
+        this.valorServico = valorServico;
     }
 
     public Integer getId() {
@@ -40,10 +40,10 @@ public class Servicos {
     }
 
     public Double getValorServico() {
-        return valorService;
+        return valorServico;
     }
 
-    public void setValorServico(Double valorService) {
-        this.valorService  = valorService;
+    public void setValorServico(Double valorServico) {
+        this.valorServico  = valorServico;
     }
 }

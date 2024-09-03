@@ -509,3 +509,139 @@ cido.
   }
 
 
+
+1. **Criar um novo serviço**
+   - **Rota:** `POST /api/servicos`
+   - **Descrição:** Cria um novo serviço com base nos dados fornecidos.
+   - **Corpo da Requisição:** 
+     ```json
+     {
+       "descricaoServico": "Descrição do Serviço",
+       "valorServico": 100.0
+     }
+     ```
+   - **Resposta de Sucesso:** 
+     - **Código:** 200 OK
+     - **Corpo:**
+       ```json
+       {
+         "id": 1,
+         "descricaoServico": "Descrição do Serviço",
+         "valorServico": 100.0
+       }
+       ```
+
+2. **Listar todos os serviços**
+   - **Rota:** `GET /api/servicos`
+   - **Descrição:** Retorna uma lista de todos os serviços disponíveis.
+   - **Resposta de Sucesso:** 
+     - **Código:** 200 OK
+     - **Corpo:**
+       ```json
+       [
+         {
+           "id": 1,
+           "descricaoServico": "Serviço 1",
+           "valorServico": 50.0
+         },
+         {
+           "id": 2,
+           "descricaoServico": "Serviço 2",
+           "valorServico": 75.0
+         }
+       ]
+       ```
+
+3. **Obter um serviço por ID**
+   - **Rota:** `GET /api/servicos/{id}`
+   - **Descrição:** Retorna os detalhes de um serviço específico pelo seu ID.
+   - **Parâmetros:**
+     - `id` (int): ID do serviço.
+   - **Resposta de Sucesso:**
+     - **Código:** 200 OK
+     - **Corpo:**
+       ```json
+       {
+         "id": 1,
+         "descricaoServico": "Serviço 1",
+         "valorServico": 50.0
+       }
+       ```
+   - **Resposta de Erro:**
+     - **Código:** 404 Not Found
+
+4. **Buscar serviços por descrição**
+   - **Rota:** `GET /api/servicos/descricao`
+   - **Descrição:** Retorna uma lista de serviços que correspondem à descrição fornecida.
+   - **Parâmetros de Consulta:**
+     - `descricao` (String): Descrição parcial ou completa do serviço.
+   - **Resposta de Sucesso:**
+     - **Código:** 200 OK
+     - **Corpo:**
+       ```json
+       [
+         {
+           "id": 1,
+           "descricaoServico": "Serviço X",
+           "valorServico": 100.0
+         }
+       ]
+       ```
+
+5. **Buscar serviços por valor**
+   - **Rota:** `GET /api/servicos/valor`
+   - **Descrição:** Retorna uma lista de serviços que correspondem ao valor fornecido.
+   - **Parâmetros de Consulta:**
+     - `valor` (Double): Valor do serviço.
+   - **Resposta de Sucesso:**
+     - **Código:** 200 OK
+     - **Corpo:**
+       ```json
+       [
+         {
+           "id": 2,
+           "descricaoServico": "Serviço Y",
+           "valorServico": 150.0
+         }
+       ]
+       ```
+
+6. **Atualizar um serviço existente**
+   - **Rota:** `PUT /api/servicos/{id}`
+   - **Descrição:** Atualiza um serviço existente com os dados fornecidos.
+   - **Parâmetros:**
+     - `id` (int): ID do serviço a ser atualizado.
+   - **Corpo da Requisição:**
+     ```json
+     {
+       "descricaoServico": "Nova Descrição do Serviço",
+       "valorServico": 200.0
+     }
+     ```
+   - **Resposta de Sucesso:**
+     - **Código:** 200 OK
+     - **Corpo:**
+       ```json
+       {
+         "id": 1,
+         "descricaoServico": "Nova Descrição do Serviço",
+         "valorServico": 200.0
+       }
+       ```
+   - **Resposta de Erro:**
+     - **Código:** 404 Not Found
+
+7. **Deletar um serviço**
+   - **Rota:** `DELETE /api/servicos/{id}`
+   - **Descrição:** Deleta um serviço com base no ID fornecido.
+   - **Parâmetros:**
+     - `id` (int): ID do serviço a ser deletado.
+   - **Resposta de Sucesso:**
+     - **Código:** 200 OK
+   - **Resposta de Erro:**
+     - **Código:** 404 Not Found
+
+### Resumo dos Filtros Disponíveis
+
+- **Filtragem por Descrição:** Use o endpoint `GET /api/servicos/descricao` com o parâmetro de consulta `descricao` para buscar serviços pela descrição.
+- **Filtragem por Valor:** Use o endpoint `GET /api/servicos/valor` com o parâmetro de consulta `valor` para buscar serviços pelo valor.

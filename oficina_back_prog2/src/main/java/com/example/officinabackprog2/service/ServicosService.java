@@ -30,14 +30,14 @@ public class ServicosService {
         return servicosRepository.findByDescricaoServico(descricaoServico);
     }
 
-    public List<Servicos> findByValorServico(Double valorService) {
-        return servicosRepository.findByValorServico(valorService);
+    public List<Servicos> findByValorServico(Double valorServico) {
+        return servicosRepository.findByValorServico(valorServico);
     }
 
-    public List<Servicos> findByDescricaoServicoAndValorServicos(String descricaoServico, Double valorServico){
-        return servicosRepository.findByDescricaoServicoAndValorServicos(descricaoServico, valorServico);
+    public List<Servicos> findByDescricaoServicoAndValorServico(String descricaoServico, Double valorServico) {
+        return servicosRepository.findByDescricaoServicoAndValorServico(descricaoServico, valorServico); 
     }
-
+    
     public Servicos update(int id, Servicos servicosDetails){
         Servicos servicos = servicosRepository.findById(id)
           .orElseThrow(()-> new ServicosNotFoundException("Servico não encontrado para  este  id::" + id));
