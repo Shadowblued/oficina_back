@@ -798,3 +798,224 @@ Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.tele
 [[1;31mERROR[m] 
 [[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
 [[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36mcom.example:oficina_back_prog2[0;1m >-------------------[m
+[[1;34mINFO[m] [1mBuilding oficina_back_prog2 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m>>> [0;32mspring-boot-maven-plugin:3.1.4:run[m [1m(default-cli)[0;1m > [0;1mtest-compile[m @ [36moficina_back_prog2[0;1m >>>[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36moficina_back_prog2[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 0 resource from src/main/resources to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.11.0:compile[m [1m(default-compile)[m @ [36moficina_back_prog2[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36moficina_back_prog2[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.11.0:testCompile[m [1m(default-testCompile)[m @ [36moficina_back_prog2[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m<<< [0;32mspring-boot-maven-plugin:3.1.4:run[m [1m(default-cli)[0;1m < [0;1mtest-compile[m @ [36moficina_back_prog2[0;1m <<<[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:3.1.4:run[m [1m(default-cli)[m @ [36moficina_back_prog2[0;1m ---[m
+[[1;34mINFO[m] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+2024-08-30T00:12:59.975Z  INFO 1327506 --- [           main] c.e.o.OfficinaBackProg2Application       : Starting OfficinaBackProg2Application using Java 17.0.12 with PID 1327506 (/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/target/classes started by ubuntu in /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2)
+2024-08-30T00:12:59.978Z  INFO 1327506 --- [           main] c.e.o.OfficinaBackProg2Application       : No active profile set, falling back to 1 default profile: "default"
+2024-08-30T00:13:00.515Z  INFO 1327506 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-30T00:13:00.576Z  INFO 1327506 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 3 JPA repository interfaces.
+2024-08-30T00:13:01.053Z  INFO 1327506 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-08-30T00:13:01.063Z  INFO 1327506 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-30T00:13:01.064Z  INFO 1327506 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-08-30T00:13:01.145Z  INFO 1327506 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-30T00:13:01.147Z  INFO 1327506 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1120 ms
+2024-08-30T00:13:01.281Z  INFO 1327506 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-30T00:13:01.321Z  INFO 1327506 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2024-08-30T00:13:01.324Z  INFO 1327506 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-08-30T00:13:01.451Z  INFO 1327506 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-08-30T00:13:01.556Z  INFO 1327506 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-30T00:13:01.571Z  INFO 1327506 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-30T00:13:01.719Z  INFO 1327506 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@403364e9
+2024-08-30T00:13:01.720Z  INFO 1327506 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-30T00:13:01.760Z  WARN 1327506 --- [           main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-08-30T00:13:01.927Z  INFO 1327506 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-08-30T00:13:02.490Z  INFO 1327506 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-30T00:13:02.553Z  INFO 1327506 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30T00:13:02.904Z  WARN 1327506 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-30T00:13:03.111Z  WARN 1327506 --- [           main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-08-30T00:13:03.194Z  INFO 1327506 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-08-30T00:13:03.202Z  INFO 1327506 --- [           main] c.e.o.OfficinaBackProg2Application       : Started OfficinaBackProg2Application in 3.537 seconds (process running for 3.813)
+2024-08-30T00:13:30.831Z  INFO 1327506 --- [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-30T00:13:30.831Z  INFO 1327506 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-30T00:13:30.832Z  INFO 1327506 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate: select m1_0.id,m1_1.cidade,m1_1.cpf,m1_1.endereco,m1_1.nome,m1_1.telefone from mecanico m1_0 join pessoa m1_1 on m1_0.id=m1_1.id
+Hibernate: select m1_0.id,m1_1.cidade,m1_1.cpf,m1_1.endereco,m1_1.nome,m1_1.telefone from mecanico m1_0 join pessoa m1_1 on m1_0.id=m1_1.id
+Hibernate: select m1_0.id,m1_1.cidade,m1_1.cpf,m1_1.endereco,m1_1.nome,m1_1.telefone from mecanico m1_0 join pessoa m1_1 on m1_0.id=m1_1.id
+Hibernate: select m1_0.id,m1_1.cidade,m1_1.cpf,m1_1.endereco,m1_1.nome,m1_1.telefone from mecanico m1_0 join pessoa m1_1 on m1_0.id=m1_1.id where m1_1.nome=?
+Hibernate: select m1_0.id,m1_1.cidade,m1_1.cpf,m1_1.endereco,m1_1.nome,m1_1.telefone from mecanico m1_0 join pessoa m1_1 on m1_0.id=m1_1.id
+Hibernate: select m1_0.id,m1_1.cidade,m1_1.cpf,m1_1.endereco,m1_1.nome,m1_1.telefone from mecanico m1_0 join pessoa m1_1 on m1_0.id=m1_1.id where m1_1.nome=?
+Hibernate: select m1_0.id,m1_1.cidade,m1_1.cpf,m1_1.endereco,m1_1.nome,m1_1.telefone from mecanico m1_0 join pessoa m1_1 on m1_0.id=m1_1.id
+Hibernate: select m1_0.id,m1_1.cidade,m1_1.cpf,m1_1.endereco,m1_1.nome,m1_1.telefone from mecanico m1_0 join pessoa m1_1 on m1_0.id=m1_1.id where m1_1.cpf=?
+Hibernate: select m1_0.id,m1_1.cidade,m1_1.cpf,m1_1.endereco,m1_1.nome,m1_1.telefone from mecanico m1_0 join pessoa m1_1 on m1_0.id=m1_1.id
+Hibernate: select m1_0.id,m1_1.cidade,m1_1.cpf,m1_1.endereco,m1_1.nome,m1_1.telefone from mecanico m1_0 join pessoa m1_1 on m1_0.id=m1_1.id where m1_1.cpf=?
+2024-08-30T01:23:38.802Z  INFO 1327506 --- [nio-8080-exec-2] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x010x070x010x000x010x030x030x03:0xd60x1f0x1e0xd3#0x100xac0xe4=0xf10x060xe30xbd0xd4)0xafskI]0x17.60xeb0xe00xd10xfc^0xa10xb30x0e ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:264) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2024-08-31T01:28:33.295Z  INFO 1327506 --- [nio-8080-exec-3] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xee0x010x000x000xea0x030x030xdbULx!Lo(I@0x130xe0^S0xb10x93T!!0xbc*0xa5UA0x070x100x8f570xdf0xac0xde ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:264) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+2024-09-01T04:00:20.757Z  INFO 1327506 --- [nio-8080-exec-4] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x000x0e88tGLp7O)0x000x000x000x000x00...]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:264) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select count(*) from cliente c1_0 where c1_0.id=?
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id where c1_0.id=?
+Hibernate: delete from cliente where id=?
+Hibernate: delete from pessoa where id=?
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: insert into pessoa (cidade,cpf,endereco,nome,telefone) values (?,?,?,?,?)
+Hibernate: insert into cliente (id) values (?)
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+2024-09-02T13:23:06.670Z  INFO 1327506 --- [nio-8080-exec-7] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x010x070x010x000x010x030x030x030x8e0x0a ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:264) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: insert into pessoa (cidade,cpf,endereco,nome,telefone) values (?,?,?,?,?)
+Hibernate: insert into cliente (id) values (?)
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+2024-09-03T00:05:48.532Z  INFO 1327506 --- [nio-8080-exec-5] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xee0x010x000x000xea0x030x030x85,p0xed"0x1b,0xd80xf70x93`$0xad0x1b$0xaca0x860xf0(0x840x93kBT0x870x080xe50xb40xc76s ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:264) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  4 d 00:25 h
+[[1;34mINFO[m] Finished at: 2024-09-03T00:38:09Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.springframework.boot:spring-boot-maven-plugin:3.1.4:run[m [1m(default-cli)[m on project [36moficina_back_prog2[m: [1;31mProcess terminated with exit code: 137[m -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
