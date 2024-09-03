@@ -1,8 +1,5 @@
-package com.example.officinabackprog2.model.veiculo;
+package com.example.officinabackprog2.model;
 
-import com.example.officinabackprog2.model.Cliente;
-
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

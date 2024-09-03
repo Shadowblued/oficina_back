@@ -1,10 +1,8 @@
 package com.example.officinabackprog2.service;
 
-import com.example.officinabackprog2.model.Cliente;
 import com.example.officinabackprog2.model.Mecanico;
 import com.example.officinabackprog2.model.Pessoa;
 import com.example.officinabackprog2.repository.MecanicoRepository;
-import com.example.officinabackprog2.service.ClienteService.ClienteNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

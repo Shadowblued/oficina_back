@@ -1,6 +1,6 @@
 package com.example.officinabackprog2.controller;
 
-import com.example.officinabackprog2.model.veiculo.Veiculo;
+import com.example.officinabackprog2.model.Veiculo;
 import com.example.officinabackprog2.service.VeiculoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

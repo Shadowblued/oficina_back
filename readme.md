@@ -1,5 +1,3 @@
-
-
 ### Documentação da API para `18.188.56.142:8080`
 
 ---
@@ -41,6 +39,13 @@
    - **Endpoint**: `/api/clientes`
    - **Método**: `GET`
    - **Descrição**: Retorna uma lista de todos os clientes cadastrados.
+   - **Parâmetros de Consulta (Query Parameters)**: 
+     - `nome`: Filtra os clientes pelo nome.
+     - `cpf`: Filtra os clientes pelo CPF.
+   - **Exemplos de Uso**:
+     - `/api/clientes?nome=Maria`
+     - `/api/clientes?cpf=111.222.333-44`
+     - `/api/clientes?nome=Maria&cpf=111.222.333-44`
    - **Respostas**:
      - **200 OK**: Lista de clientes retornada com sucesso.
        ```json
@@ -161,6 +166,13 @@
    - **Endpoint**: `/api/mecanicos`
    - **Método**: `GET`
    - **Descrição**: Retorna uma lista de todos os mecânicos cadastrados.
+   - **Parâmetros de Consulta (Query Parameters)**: 
+     - `nome`: Filtra os mecânicos pelo nome.
+     - `cpf`: Filtra os mecânicos pelo CPF.
+   - **Exemplos de Uso**:
+     - `/api/mecanicos?nome=Maria`
+     - `/api/mecanicos?cpf=111.222.333-44`
+     - `/api/mecanicos?nome=Maria&cpf=111.222.333-44`
    - **Respostas**:
      - **200 OK**: Lista de mecânicos retornada com sucesso.
        ```json
@@ -228,7 +240,9 @@
        }
        ```
      - **400 Bad Request**: Dados inválidos fornecidos na requisição.
-     - **404 Not Found**: Mecânico não encontrado com o ID fornecido.
+     - **404 Not Found**: Mecânico não encontrado com o ID forne
+
+cido.
      - **500 Internal Server Error**: Erro interno do servidor ao processar a requisição.
 
 5. **Deletar um Mecânico por ID**
@@ -238,9 +252,7 @@
      - **Path Parameter**: `id` (inteiro) - ID do mecânico a ser deletado.
    - **Descrição**: Deleta um mecânico específico pelo ID.
    - **Respostas**:
-     - **204 No Content**: Mecânico deletado com
-
- sucesso.
+     - **204 No Content**: Mecânico deletado com sucesso.
      - **404 Not Found**: Mecânico não encontrado com o ID fornecido.
      - **500 Internal Server Error**: Erro interno do servidor ao processar a requisição.
 

@@ -1,6 +1,5 @@
 package com.example.officinabackprog2.controller;
 
-import com.example.officinabackprog2.model.Cliente;
 import com.example.officinabackprog2.model.Mecanico;
 import com.example.officinabackprog2.service.MecanicoService;
 import org.springframework.beans.factory.annotation.Autowired;

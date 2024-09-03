@@ -1,6 +1,6 @@
 package com.example.officinabackprog2.service;
 
-import com.example.officinabackprog2.model.veiculo.Veiculo;
+import com.example.officinabackprog2.model.Veiculo;
 import com.example.officinabackprog2.repository.VeiculoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
