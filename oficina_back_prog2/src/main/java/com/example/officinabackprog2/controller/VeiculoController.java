@@ -23,8 +23,21 @@ public class VeiculoController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Veiculo>> getAllVeiculos() {
-        List<Veiculo> veiculos = veiculoService.findAll();
+    public ResponseEntity<List<Veiculo>> getVeiculos(
+            @RequestParam(value = "placa", required = false) String placa,
+            @RequestParam(value = "anoModelo", required = false) String anoModelo) {
+        List<Veiculo> veiculos;
+        
+        if (placa != null && anoModelo != null) {
+            veiculos = veiculoService.findByPlacaAndAnoModelo(placa, anoModelo);
+        } else if (placa != null) {
+            veiculos = veiculoService.findByPlaca(placa);
+        } else if (anoModelo != null) {
+            veiculos = veiculoService.findByAnoModelo(anoModelo);
+        } else {
+            veiculos = veiculoService.findAll();
+        }
+        
         return ResponseEntity.ok(veiculos);
     }
 
@@ -32,24 +45,6 @@ public class VeiculoController {
     public ResponseEntity<Veiculo> getVeiculoById(@PathVariable int id) {
         Optional<Veiculo> veiculo = veiculoService.findById(id);
         return veiculo.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
-    }
-
-    @GetMapping("/placa/{placa}")
-    public ResponseEntity<List<Veiculo>> getVeiculosByPlaca(@PathVariable String placa) {
-        List<Veiculo> veiculos = veiculoService.findByPlaca(placa);
-        return ResponseEntity.ok(veiculos);
-    }
-
-    @GetMapping("/ano/{ano}")
-    public ResponseEntity<List<Veiculo>> getVeiculosByAnoModelo(@PathVariable String anoModelo) {
-        List<Veiculo> veiculos = veiculoService.findByAnoModelo(anoModelo);
-        return ResponseEntity.ok(veiculos);
-    }
-
-    @GetMapping("/search")
-    public ResponseEntity<List<Veiculo>> getVeiculosByPlacaAndAnoModelo(@RequestParam String placa, @RequestParam String anoModelo) {
-        List<Veiculo> veiculos = veiculoService.findByPlacaAndAnoModelo(placa, anoModelo);
-        return ResponseEntity.ok(veiculos);
     }
 
     @PutMapping("/{id}")

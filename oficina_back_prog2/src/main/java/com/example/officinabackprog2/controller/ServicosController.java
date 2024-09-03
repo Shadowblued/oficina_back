@@ -24,10 +24,22 @@ public class ServicosController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Servicos>> getAllServicos() {
-        List<Servicos> servicos = servicosService.findAll();
+    public ResponseEntity<List<Servicos>> getServicos(
+            @RequestParam(value = "descricao", required = false) String descricao,
+            @RequestParam(value = "valor", required = false) Double valor) {
+        List<Servicos> servicos;
+        
+        if (descricao != null) {
+            servicos = servicosService.findByDescricaoServicos(descricao);
+        } else if (valor != null) {
+            servicos = servicosService.findByValorServico(valor);
+        } else {
+            servicos = servicosService.findAll();
+        }
+        
         return ResponseEntity.ok(servicos);
     }
+    
 
     @GetMapping("/{id}")
     public ResponseEntity<Servicos> getServicosById(@PathVariable int id) {
@@ -35,17 +47,6 @@ public class ServicosController {
         return servicos.map(ResponseEntity::ok).orElseGet(()-> ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/descricao")
-    public ResponseEntity<List<Servicos>> getServicosByDescricaoServicos(@RequestParam("descricao") String descricaoServicos) {
-        List<Servicos> servicos = servicosService.findByDescricaoServicos(descricaoServicos);
-        return ResponseEntity.ok(servicos);
-    }
-    
-    @GetMapping("/valor")
-    public ResponseEntity<List<Servicos>> getServicosByValorServicos(@RequestParam("valor") Double valorServicos) {
-        List<Servicos> servicos = servicosService.findByValorServico(valorServicos);
-        return ResponseEntity.ok(servicos);
-    }
     @PutMapping("/{id}")
     public ResponseEntity<Servicos> updateServicos(@PathVariable int id, @RequestBody Servicos servicosDetails) {
         try{
