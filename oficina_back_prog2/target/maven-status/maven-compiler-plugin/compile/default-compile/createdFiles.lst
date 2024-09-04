@@ -1,7 +1,6 @@
 com/example/officinabackprog2/config/CorsConfig.class
 com/example/officinabackprog2/model/Pessoa.class
 com/example/officinabackprog2/service/ClienteService.class
-com/example/officinabackprog2/controller/Valid.class
 com/example/officinabackprog2/controller/MecanicoController.class
 com/example/officinabackprog2/controller/ClienteController.class
 com/example/officinabackprog2/service/VeiculoService.class

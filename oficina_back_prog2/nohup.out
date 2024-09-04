@@ -1244,3 +1244,114 @@ Hibernate: select s1_0.id,s1_0.descricao_servico,s1_0.valor_servico from servico
 [[1;31mERROR[m] 
 [[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
 [[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-------------------< [0;36mcom.example:oficina_back_prog2[0;1m >-------------------[m
+[[1;34mINFO[m] [1mBuilding oficina_back_prog2 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m>>> [0;32mspring-boot-maven-plugin:3.1.4:run[m [1m(default-cli)[0;1m > [0;1mtest-compile[m @ [36moficina_back_prog2[0;1m >>>[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36moficina_back_prog2[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 0 resource from src/main/resources to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.11.0:compile[m [1m(default-compile)[m @ [36moficina_back_prog2[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36moficina_back_prog2[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.11.0:testCompile[m [1m(default-testCompile)[m @ [36moficina_back_prog2[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m<<< [0;32mspring-boot-maven-plugin:3.1.4:run[m [1m(default-cli)[0;1m < [0;1mtest-compile[m @ [36moficina_back_prog2[0;1m <<<[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:3.1.4:run[m [1m(default-cli)[m @ [36moficina_back_prog2[0;1m ---[m
+[[1;34mINFO[m] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+2024-09-03T19:43:47.242Z  INFO 1916754 --- [           main] c.e.o.OfficinaBackProg2Application       : Starting OfficinaBackProg2Application using Java 17.0.12 with PID 1916754 (/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/target/classes started by ubuntu in /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2)
+2024-09-03T19:43:47.244Z  INFO 1916754 --- [           main] c.e.o.OfficinaBackProg2Application       : No active profile set, falling back to 1 default profile: "default"
+2024-09-03T19:43:47.791Z  INFO 1916754 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-03T19:43:47.860Z  INFO 1916754 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 5 JPA repository interfaces.
+2024-09-03T19:43:48.349Z  INFO 1916754 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-09-03T19:43:48.360Z  INFO 1916754 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-03T19:43:48.360Z  INFO 1916754 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2024-09-03T19:43:48.445Z  INFO 1916754 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-03T19:43:48.447Z  INFO 1916754 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1153 ms
+2024-09-03T19:43:48.585Z  INFO 1916754 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-03T19:43:48.626Z  INFO 1916754 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2024-09-03T19:43:48.628Z  INFO 1916754 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-09-03T19:43:48.756Z  INFO 1916754 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-09-03T19:43:48.867Z  INFO 1916754 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-03T19:43:48.882Z  INFO 1916754 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-03T19:43:49.040Z  INFO 1916754 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5329f6b3
+2024-09-03T19:43:49.041Z  INFO 1916754 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-03T19:43:49.080Z  WARN 1916754 --- [           main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-09-03T19:43:49.269Z  INFO 1916754 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-09-03T19:43:49.883Z  INFO 1916754 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-09-03T19:43:49.961Z  INFO 1916754 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-03T19:43:50.408Z  WARN 1916754 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-03T19:43:50.645Z  WARN 1916754 --- [           main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-09-03T19:43:50.728Z  INFO 1916754 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-09-03T19:43:50.737Z  INFO 1916754 --- [           main] c.e.o.OfficinaBackProg2Application       : Started OfficinaBackProg2Application in 3.838 seconds (process running for 4.156)
+2024-09-03T19:43:51.592Z  INFO 1916754 --- [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-03T19:43:51.593Z  INFO 1916754 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-03T19:43:51.594Z  INFO 1916754 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate: select v1_0.id,v1_0.ano_modelo,v1_0.cliente_id,v1_0.descricao,v1_0.placa from veiculo v1_0 where v1_0.ano_modelo=?
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id where c1_0.id=?
+Hibernate: select v1_0.id,v1_0.ano_modelo,v1_0.cliente_id,v1_0.descricao,v1_0.placa from veiculo v1_0 where v1_0.ano_modelo=?
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id where c1_0.id=?
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id where c1_1.nome=?
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id where c1_1.nome=?
+2024-09-03T19:48:03.751Z  INFO 1916754 --- [nio-8080-exec-7] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000x850x010x000x000x810x030x030xdcb0xa50xa60x1d0x860xe90xbf0x8fe0x1a0x860xec0xe00xc360xb3_ ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:264) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id where c1_0.id=?
+Hibernate: update pessoa set cidade=?,cpf=?,endereco=?,nome=?,telefone=? where id=?
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id where c1_0.id=?
+Hibernate: update pessoa set cidade=?,cpf=?,endereco=?,nome=?,telefone=? where id=?
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+Hibernate: select c1_0.id,c1_1.cidade,c1_1.cpf,c1_1.endereco,c1_1.nome,c1_1.telefone from cliente c1_0 join pessoa c1_1 on c1_0.id=c1_1.id
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  05:11 h
+[[1;34mINFO[m] Finished at: 2024-09-04T00:55:06Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.springframework.boot:spring-boot-maven-plugin:3.1.4:run[m [1m(default-cli)[m on project [36moficina_back_prog2[m: [1;31mProcess terminated with exit code: 137[m -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

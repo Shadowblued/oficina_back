@@ -645,3 +645,108 @@ cido.
 
 - **Filtragem por Descrição:** Use o endpoint `GET /api/servicos/descricao` com o parâmetro de consulta `descricao` para buscar serviços pela descrição.
 - **Filtragem por Valor:** Use o endpoint `GET /api/servicos/valor` com o parâmetro de consulta `valor` para buscar serviços pelo valor.
+
+
+#### 1. Create a New Marca
+
+- **URL:** `/`
+- **Method:** `POST`
+- **Request Body:** JSON object representing a Marca
+  ```json
+  {
+    "nomeMarca": "string"
+  }
+  ```
+- **Response:**
+  - **Success (200 OK):** Returns the created Marca object
+    ```json
+    {
+      "id": 1,
+      "nomeMarca": "string"
+    }
+    ```
+  - **Error (400 Bad Request):** If the request body is invalid
+
+#### 2. Get All Marca or Search by Name
+
+- **URL:** `/`
+- **Method:** `GET`
+- **Query Parameter:** Optional `nome` parameter to filter by marca name
+  - `nome`: *string* - name of the Marca to filter
+- **Response:**
+  - **Success (200 OK):** Returns a list of Marca objects
+    ```json
+    [
+      {
+        "id": 1,
+        "nomeMarca": "string"
+      },
+      {
+        "id": 2,
+        "nomeMarca": "string"
+      }
+    ]
+    ```
+
+#### 3. Get Marca by ID
+
+- **URL:** `/{id}`
+- **Method:** `GET`
+- **Path Parameter:** 
+  - `id`: *integer* - ID of the Marca
+- **Response:**
+  - **Success (200 OK):** Returns the Marca object
+    ```json
+    {
+      "id": 1,
+      "nomeMarca": "string"
+    }
+    ```
+  - **Error (404 Not Found):** If no Marca is found with the given ID
+
+#### 4. Update Marca by ID
+
+- **URL:** `/{id}`
+- **Method:** `PUT`
+- **Path Parameter:** 
+  - `id`: *integer* - ID of the Marca to update
+- **Request Body:** JSON object representing the Marca details to update
+  ```json
+  {
+    "nomeMarca": "string"
+  }
+  ```
+- **Response:**
+  - **Success (200 OK):** Returns the updated Marca object
+    ```json
+    {
+      "id": 1,
+      "nomeMarca": "string"
+    }
+    ```
+  - **Error (404 Not Found):** If no Marca is found with the given ID
+
+#### 5. Delete Marca by ID
+
+- **URL:** `/{id}`
+- **Method:** `DELETE`
+- **Path Parameter:** 
+  - `id`: *integer* - ID of the Marca to delete
+- **Response:**
+  - **Success (200 OK):** Marca deleted successfully
+  - **Error (404 Not Found):** If no Marca is found with the given ID
+
+### Error Handling
+
+- **404 Not Found:** The resource could not be found.
+- **400 Bad Request:** The request was invalid or cannot be served. This could be due to validation errors in the input data.
+
+### Models
+
+#### Marca
+```json
+{
+  "id": "integer",
+  "nomeMarca": "string"
+}
+```
