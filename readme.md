@@ -750,3 +750,197 @@ cido.
   "nomeMarca": "string"
 }
 ```
+##  Gerenciamento de Peças
+
+### URL Base
+Todos os endpoints estão prefixados com `/api/pecas`.
+
+---
+
+### Endpoints
+
+#### 1. **Criar uma Nova Peça**
+
+- **URL**: `/api/pecas`
+- **Método**: `POST`
+- **Descrição**: Cria uma nova peça no sistema.
+- **Corpo da Requisição**:
+  ```json
+  {
+    "descricao": "string",
+    "preco": "double",
+    "marca": {
+      "id": "integer"
+    }
+  }
+  ```
+- **Resposta**:
+  - **Status**: `200 OK`
+  - **Corpo**:
+    ```json
+    {
+      "id": "integer",
+      "descricao": "string",
+      "preco": "double",
+      "marca": {
+        "id": "integer",
+        "nome": "string"
+      }
+    }
+    ```
+- **Erros**:
+  - `400 Bad Request` – Se os dados de entrada forem inválidos.
+
+#### 2. **Consultar Peças**
+
+- **URL**: `/api/pecas`
+- **Método**: `GET`
+- **Descrição**: Recupera todas as peças ou filtra por descrição ou preço.
+- **Parâmetros de Consulta** (opcional):
+  - `descricao`: Filtra por descrição da peça.
+  - `preco`: Filtra por preço da peça.
+- **Resposta**:
+  - **Status**: `200 OK`
+  - **Corpo**:
+    ```json
+    [
+      {
+        "id": "integer",
+        "descricao": "string",
+        "preco": "double",
+        "marca": {
+          "id": "integer",
+          "nome": "string"
+        }
+      }
+    ]
+    ```
+
+#### 3. **Consultar Peça por ID**
+
+- **URL**: `/api/pecas/{id}`
+- **Método**: `GET`
+- **Descrição**: Recupera uma peça específica pelo seu ID.
+- **Parâmetro de Caminho**:
+  - `id`: O ID da peça que deseja recuperar.
+- **Resposta**:
+  - **Status**: `200 OK`
+  - **Corpo**:
+    ```json
+    {
+      "id": "integer",
+      "descricao": "string",
+      "preco": "double",
+      "marca": {
+        "id": "integer",
+        "nome": "string"
+      }
+    }
+    ```
+  - **Erros**:
+    - `404 Not Found` – Se a peça com o ID especificado não for encontrada.
+
+#### 4. **Atualizar Peça**
+
+- **URL**: `/api/pecas/{id}`
+- **Método**: `PUT`
+- **Descrição**: Atualiza os detalhes de uma peça existente.
+- **Parâmetro de Caminho**:
+  - `id`: O ID da peça que deseja atualizar.
+- **Corpo da Requisição**:
+  ```json
+  {
+    "descricao": "string",
+    "preco": "double",
+    "marca": {
+      "id": "integer"
+    }
+  }
+  ```
+- **Resposta**:
+  - **Status**: `200 OK`
+  - **Corpo**:
+    ```json
+    {
+      "id": "integer",
+      "descricao": "string",
+      "preco": "double",
+      "marca": {
+        "id": "integer",
+        "nome": "string"
+      }
+    }
+    ```
+  - **Erros**:
+    - `404 Not Found` – Se a peça com o ID especificado não for encontrada.
+
+#### 5. **Excluir Peça**
+
+- **URL**: `/api/pecas/{id}`
+- **Método**: `DELETE`
+- **Descrição**: Exclui uma peça pelo seu ID.
+- **Parâmetro de Caminho**:
+  - `id`: O ID da peça que deseja excluir.
+- **Resposta**:
+  - **Status**: `204 No Content` – Peça excluída com sucesso.
+  - **Erros**:
+    - `404 Not Found` – Se a peça com o ID especificado não for encontrada.
+
+---
+
+### Códigos de Erro
+
+- **400 Bad Request**: Os dados da requisição são inválidos ou mal formatados.
+- **404 Not Found**: O recurso com o ID especificado não foi encontrado.
+
+### Modelos
+
+#### Modelo Peças
+```json
+{
+  "id": "integer",
+  "descricao": "string",
+  "preco": "double",
+  "marca": {
+    "id": "integer",
+    "nome": "string"
+  }
+}
+```
+
+### Exemplos de Requisição
+
+1. **Criar uma nova peça**:
+   ```bash
+   POST /api/pecas
+   {
+     "descricao": "Peça Exemplo",
+     "preco": 99.99,
+     "marca": { "id": 1 }
+   }
+   ```
+
+2. **Obter todas as peças**:
+   ```bash
+   GET /api/pecas
+   ```
+
+3. **Obter uma peça pelo ID**:
+   ```bash
+   GET /api/pecas/1
+   ```
+
+4. **Atualizar uma peça**:
+   ```bash
+   PUT /api/pecas/1
+   {
+     "descricao": "Peça Atualizada",
+     "preco": 199.99,
+     "marca": { "id": 1 }
+   }
+   ```
+
+5. **Excluir uma peça**:
+   ```bash
+   DELETE /api/pecas/1
+   ```
