@@ -65,6 +65,7 @@ public class ClienteController {
             clienteExistente.setCpf(clienteAtualizado.getCpf());
             clienteExistente.setCidade(clienteAtualizado.getCidade());
             clienteExistente.setTelefone(clienteAtualizado.getTelefone());
+            clienteExistente.setEmail(clienteAtualizado.getEmail());
 
             Cliente clienteSalvo = clienteService.update(id, clienteExistente);
             return ResponseEntity.ok(clienteSalvo);

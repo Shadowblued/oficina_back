@@ -1,14 +1,9 @@
-com/example/officinabackprog2/config/CorsConfig.class
 com/example/officinabackprog2/model/Pessoa.class
-com/example/officinabackprog2/service/ClienteService.class
 com/example/officinabackprog2/controller/MecanicoController.class
-com/example/officinabackprog2/controller/ClienteController.class
 com/example/officinabackprog2/service/VeiculoService.class
-com/example/officinabackprog2/OfficinaBackProg2Application.class
 com/example/officinabackprog2/controller/PessoaController.class
 com/example/officinabackprog2/repository/PessoaRepository.class
 com/example/officinabackprog2/service/MecanicoService.class
-com/example/officinabackprog2/config/CorsConfig$1.class
 com/example/officinabackprog2/service/MecanicoService$MecanicoNotFoundException.class
 com/example/officinabackprog2/repository/ClienteRepository.class
 com/example/officinabackprog2/controller/VeiculoController.class
@@ -18,4 +13,3 @@ com/example/officinabackprog2/repository/MecanicoRepository.class
 com/example/officinabackprog2/service/PessoaService.class
 com/example/officinabackprog2/repository/VeiculoRepository.class
 com/example/officinabackprog2/model/Mecanico.class
-com/example/officinabackprog2/service/ClienteService$ClienteNotFoundException.class

@@ -68,34 +68,38 @@ public class OSController {
         return ResponseEntity.noContent().build();
     }
 
-    @PostMapping("/email/{id_os}")
-    public ResponseEntity<String> enviarEmailOS(@PathVariable Integer id_os, @RequestBody EmailRequest emailRequest) {
-        String email = emailRequest.getEmail().trim();
-    
-        if (!EMAIL_PATTERN.matcher(email).matches()) {
-            return ResponseEntity.badRequest().body("Endereço de e-mail inválido.");
-        }
-    
-        Optional<OS> optionalOS = osService.buscarPorId(id_os);
-        if (!optionalOS.isPresent()) {
-            return ResponseEntity.notFound().build();
-        }
-    
-        OS os = optionalOS.get();
-    
-        String assunto = "Detalhes da Ordem de Serviço #" + os.getNumero_os();
-        String corpo = "Detalhes da OS:\n" +
-                "Número OS: " + os.getNumero_os() + "\n" +
-                "Cliente: " + (os.getCliente() != null ? os.getCliente().getNome() : "N/A") + "\n" +
-                "Mecânico: " + (os.getMecanico() != null ? os.getMecanico().getNome() : "N/A") + "\n" +
-                "Veículo: " + (os.getVeiculo() != null ? os.getVeiculo().getDescricao() : "N/A") + "\n" +
-                "Valor Total: " + os.getValorTotal() + "\n";
-    
-        emailService.enviarEmail(email, assunto, corpo);
-    
-        return ResponseEntity.ok("E-mail enviado com sucesso para: " + email);
+@PostMapping("/email/{id_os}")
+public ResponseEntity<String> enviarEmailOS(@PathVariable Integer id_os) {
+    Optional<OS> optionalOS = osService.buscarPorId(id_os);
+    if (!optionalOS.isPresent()) {
+        return ResponseEntity.notFound().build();
     }
+
+    OS os = optionalOS.get();
     
+    if (os.getCliente() == null || os.getCliente().getEmail() == null || os.getCliente().getEmail().trim().isEmpty()) {
+        return ResponseEntity.badRequest().body("Cliente não possui e-mail cadastrado.");
+    }
+
+    String email = os.getCliente().getEmail().trim();
+
+    if (!EMAIL_PATTERN.matcher(email).matches()) {
+        return ResponseEntity.badRequest().body("Endereço de e-mail do cliente inválido.");
+    }
+
+    String assunto = "Detalhes da Ordem de Serviço #" + os.getNumero_os();
+    String corpo = "Detalhes da OS:\n" +
+            "Número OS: " + os.getNumero_os() + "\n" +
+            "Cliente: " + (os.getCliente() != null ? os.getCliente().getNome() : "N/A") + "\n" +
+            "Mecânico: " + (os.getMecanico() != null ? os.getMecanico().getNome() : "N/A") + "\n" +
+            "Veículo: " + (os.getVeiculo() != null ? os.getVeiculo().getDescricao() : "N/A") + "\n" +
+            "Valor Total: " + os.getValorTotal() + "\n";
+
+    emailService.enviarEmail(email, assunto, corpo);
+
+    return ResponseEntity.ok("E-mail enviado com sucesso para: " + email);
+}
+
 }
 
 

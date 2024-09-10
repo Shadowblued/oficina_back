@@ -52,6 +52,7 @@ public class ClienteService {
         cliente.setCpf(clienteDetails.getCpf());
         cliente.setCidade(clienteDetails.getCidade());
         cliente.setTelefone(clienteDetails.getTelefone());
+        cliente.setEmail(clienteDetails.getEmail());
 
         return clienteRepository.save(cliente);
     }

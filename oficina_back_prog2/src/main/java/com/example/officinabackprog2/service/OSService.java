@@ -68,10 +68,15 @@ public class OSService {
             Set<Servicos> servicosSet = new HashSet<>(servicosRepository.findAllById(servicosList.stream().map(Servicos::getId).toList()));
             os.setServicos(servicosSet);
         }
+        
     
         os.calcularValorTotal();
     
-        return osRepository.save(os);
+        OS novaOS = osRepository.save(os); 
+    
+        novaOS.setNumero_os("OS-" + novaOS.getId());
+        
+        return osRepository.save(novaOS); 
     }
 
     public OS atualizar(OS os) {

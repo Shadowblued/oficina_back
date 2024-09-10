@@ -13,7 +13,7 @@ public class OS {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private Integer numero_os;
+    private String numero_os;
 
     @Column(name = "abertura_os", nullable = false, updatable = false)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
@@ -61,6 +61,11 @@ public class OS {
 
     }
 
+    @PostPersist
+    protected void onPostPersist() {
+        this.numero_os = "OS-" + this.id;
+    }
+
     public void calcularValorTotal() {
         this.valorTotal = 0.0;
 
@@ -76,7 +81,7 @@ public class OS {
     public OS() {
     }
 
-    public OS(Integer numero_os, LocalDate aberturaOs, LocalDate encerramentoOs, 
+    public OS(String numero_os, LocalDate aberturaOs, LocalDate encerramentoOs, 
               Cliente cliente, Mecanico mecanico, Veiculo veiculo, Set<Pecas> pecas, Set<Servicos> servicos) {
         this.numero_os = numero_os;
         this.aberturaOs = aberturaOs;
@@ -97,11 +102,11 @@ public class OS {
         this.id = id;
     }
 
-    public Integer getNumero_os() {
+    public String getNumero_os() {
         return numero_os;
     }
 
-    public void setNumero_os(Integer numero_os) {
+    public void setNumero_os(String numero_os) {
         this.numero_os = numero_os;
     }
 
