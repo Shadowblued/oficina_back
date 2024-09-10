@@ -25,7 +25,6 @@ public class OSController {
     private static final Pattern EMAIL_PATTERN = 
         Pattern.compile("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$");
 
-    // Torne a classe estática
     public static class EmailRequest {
         private String email;
 
@@ -71,24 +70,19 @@ public class OSController {
 
     @PostMapping("/email/{id_os}")
     public ResponseEntity<String> enviarEmailOS(@PathVariable Integer id_os, @RequestBody EmailRequest emailRequest) {
-        // Remover espaços em branco
         String email = emailRequest.getEmail().trim();
     
-        // Verificar se o e-mail é válido
         if (!EMAIL_PATTERN.matcher(email).matches()) {
             return ResponseEntity.badRequest().body("Endereço de e-mail inválido.");
         }
     
-        // Buscar a OS pelo ID
         Optional<OS> optionalOS = osService.buscarPorId(id_os);
         if (!optionalOS.isPresent()) {
             return ResponseEntity.notFound().build();
         }
     
-        // Pega a OS
         OS os = optionalOS.get();
     
-        // Preparar o conteúdo do e-mail
         String assunto = "Detalhes da Ordem de Serviço #" + os.getNumero_os();
         String corpo = "Detalhes da OS:\n" +
                 "Número OS: " + os.getNumero_os() + "\n" +
@@ -97,7 +91,6 @@ public class OSController {
                 "Veículo: " + (os.getVeiculo() != null ? os.getVeiculo().getDescricao() : "N/A") + "\n" +
                 "Valor Total: " + os.getValorTotal() + "\n";
     
-        // Enviar o e-mail
         emailService.enviarEmail(email, assunto, corpo);
     
         return ResponseEntity.ok("E-mail enviado com sucesso para: " + email);
