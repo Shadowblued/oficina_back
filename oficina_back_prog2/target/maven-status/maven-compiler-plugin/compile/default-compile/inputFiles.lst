@@ -1,3 +1,4 @@
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/repository/OSRepository.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/controller/VeiculoController.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/controller/PecasController.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/controller/MecanicoController.java
@@ -6,7 +7,9 @@
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/repository/MecanicoRepository.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/repository/ServicosRepository.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/service/PessoaService.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/model/OS.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/service/MecanicoService.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/service/EmailService.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/service/PecasService.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/model/Servicos.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/service/MarcaService.java
@@ -19,6 +22,7 @@
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/service/ServicosService.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/repository/MarcaRepository.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/model/Marca.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/service/OSService.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/OfficinaBackProg2Application.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/model/Veiculo.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/model/Cliente.java
@@ -27,4 +31,5 @@
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/repository/VeiculoRepository.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/controller/ClienteController.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/repository/PecasRepository.java
+/home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/controller/OSController.java
 /home/ubuntu/repositorios/oficina_back_prog2/oficina_back_prog2/src/main/java/com/example/officinabackprog2/model/Mecanico.java

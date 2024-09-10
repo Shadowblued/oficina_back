@@ -944,3 +944,213 @@ Todos os endpoints estão prefixados com `/api/pecas`.
    ```bash
    DELETE /api/pecas/1
    ```
+
+
+
+##  Ordem de Serviço (OS)**
+
+
+### **Rotas Disponíveis**
+
+#### 1. **Listar todas as OS**
+**Descrição**: Retorna todas as ordens de serviço cadastradas.
+
+- **URL**: `/api/os`
+- **Método HTTP**: `GET`
+- **Resposta**:
+  - **Status 200 OK**: Retorna uma lista de todas as OS.
+  - **Formato da Resposta**:
+    ```json
+    [
+      {
+        "id": 1,
+        "numero_os": 1001,
+        "aberturaOs": "12/08/2023",
+        "encerramentoOs": null,
+        "valorTotal": 200.00,
+        "cliente": { "id": 1, "nome": "João" },
+        "mecanico": { "id": 2, "nome": "Pedro" },
+        "veiculo": { "id": 1, "descricao": "Carro Vermelho" },
+        "pecas": [
+          { "id": 1, "descricao": "Pneu", "preco": 100.00 }
+        ],
+        "servicos": [
+          { "id": 1, "descricaoServico": "Troca de óleo", "valorServico": 100.00 }
+        ]
+      }
+    ]
+    ```
+
+---
+
+#### 2. **Buscar OS por ID**
+**Descrição**: Retorna uma OS específica pelo seu ID.
+
+- **URL**: `/api/os/{id}`
+- **Método HTTP**: `GET`
+- **Parâmetros**:
+  - `id`: ID da OS (ex: `/api/os/1`)
+- **Resposta**:
+  - **Status 200 OK**: Retorna os detalhes da OS.
+  - **Status 404 Not Found**: OS não encontrada.
+  - **Formato da Resposta**:
+    ```json
+    {
+      "id": 1,
+      "numero_os": 1001,
+      "aberturaOs": "12/08/2023",
+      "encerramentoOs": null,
+      "valorTotal": 200.00,
+      "cliente": { "id": 1, "nome": "João" },
+      "mecanico": { "id": 2, "nome": "Pedro" },
+      "veiculo": { "id": 1, "descricao": "Carro Vermelho" },
+      "pecas": [
+        { "id": 1, "descricao": "Pneu", "preco": 100.00 }
+      ],
+      "servicos": [
+        { "id": 1, "descricaoServico": "Troca de óleo", "valorServico": 100.00 }
+      ]
+    }
+    ```
+
+---
+
+#### 3. **Criar uma nova OS**
+**Descrição**: Cria uma nova ordem de serviço.
+
+- **URL**: `/api/os`
+- **Método HTTP**: `POST`
+- **Corpo da Requisição** (JSON):
+    ```json
+    {
+      "numero_os": 1003,
+      "cliente": { "id": 1 },
+      "mecanico": { "id": 2 },
+      "veiculo": { "id": 1 },
+      "pecas": [
+        { "id": 1 }
+      ],
+      "servicos": [
+        { "id": 1 }
+      ]
+    }
+    ```
+- **Resposta**:
+  - **Status 201 Created**: Retorna a OS criada.
+  - **Formato da Resposta**:
+    ```json
+    {
+      "id": 3,
+      "numero_os": 1003,
+      "aberturaOs": "14/09/2023",
+      "encerramentoOs": null,
+      "valorTotal": 200.00,
+      "cliente": { "id": 1, "nome": "João" },
+      "mecanico": { "id": 2, "nome": "Pedro" },
+      "veiculo": { "id": 1, "descricao": "Carro Vermelho" },
+      "pecas": [
+        { "id": 1, "descricao": "Pneu", "preco": 100.00 }
+      ],
+      "servicos": [
+        { "id": 1, "descricaoServico": "Troca de óleo", "valorServico": 100.00 }
+      ]
+    }
+    ```
+
+---
+
+#### 4. **Atualizar uma OS existente**
+**Descrição**: Atualiza os dados de uma ordem de serviço existente.
+
+- **URL**: `/api/os/{id}`
+- **Método HTTP**: `PUT`
+- **Parâmetros**:
+  - `id`: ID da OS a ser atualizada (ex: `/api/os/1`)
+- **Corpo da Requisição** (JSON):
+    ```json
+    {
+      "id": 1,
+      "numero_os": 1001,
+      "cliente": { "id": 1 },
+      "mecanico": { "id": 2 },
+      "veiculo": { "id": 1 },
+      "pecas": [
+        { "id": 1 }
+      ],
+      "servicos": [
+        { "id": 1 }
+      ]
+    }
+    ```
+- **Resposta**:
+  - **Status 200 OK**: Retorna a OS atualizada.
+  - **Status 400 Bad Request**: Caso o ID no corpo não corresponda ao ID da URL.
+  - **Formato da Resposta**:
+    ```json
+    {
+      "id": 1,
+      "numero_os": 1001,
+      "aberturaOs": "12/08/2023",
+      "encerramentoOs": null,
+      "valorTotal": 200.00,
+      "cliente": { "id": 1, "nome": "João" },
+      "mecanico": { "id": 2, "nome": "Pedro" },
+      "veiculo": { "id": 1, "descricao": "Carro Vermelho" },
+      "pecas": [
+        { "id": 1, "descricao": "Pneu", "preco": 100.00 }
+      ],
+      "servicos": [
+        { "id": 1, "descricaoServico": "Troca de óleo", "valorServico": 100.00 }
+      ]
+    }
+    ```
+
+---
+
+#### 5. **Deletar uma OS**
+**Descrição**: Deleta uma ordem de serviço específica pelo ID.
+
+- **URL**: `/api/os/{id}`
+- **Método HTTP**: `DELETE`
+- **Parâmetros**:
+  - `id`: ID da OS a ser deletada (ex: `/api/os/1`)
+- **Resposta**:
+  - **Status 204 No Content**: OS deletada com sucesso.
+  - **Status 404 Not Found**: OS não encontrada.
+
+---
+
+#### 6. **Enviar e-mail com os detalhes da OS**
+**Descrição**: Envia um e-mail com os detalhes da OS para o endereço fornecido.
+
+- **URL**: `/api/email/{id_os}`
+- **Método HTTP**: `POST`
+- **Parâmetros**:
+  - `id_os`: ID da OS a ser enviada (ex: `/api/email/1`)
+- **Corpo da Requisição** (JSON):
+    ```json
+    {
+      "email": "destinatario@exemplo.com"
+    }
+    ```
+- **Resposta**:
+  - **Status 200 OK**: E-mail enviado com sucesso.
+  - **Status 404 Not Found**: OS não encontrada.
+  - **Formato da Resposta**:
+    ```json
+    {
+      "message": "E-mail enviado com sucesso para: destinatario@exemplo.com"
+    }
+    ```
+
+---
+
+### **Códigos de Status Comuns**:
+
+- `200 OK`: Requisição bem-sucedida, os dados são retornados ou o e-mail é enviado.
+- `201 Created`: A OS foi criada com sucesso.
+- `204 No Content`: A OS foi deletada com sucesso.
+- `400 Bad Request`: Erro na requisição enviada (ex: ID incorreto ou dados inválidos).
+- `404 Not Found`: OS não encontrada ou recurso inexistente.
+
+---
